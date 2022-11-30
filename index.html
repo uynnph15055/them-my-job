@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="header-top" class="header padding__container">
+        <div class="header__top">
+          <div class="header__top-social">
+            <p class="header__top-social--title">media</p>
+            <ul class="header__top-social-list">
+              <li class="header__top-social--item">
+                <a class="header__top-social--item-link" href=""
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li class="header__top-social--item">
+                <a class="header__top-social--item-link" href=""
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="header__top-social--item">
+                <a class="header__top-social--item-link" href=""
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <p class="header__top-social--time">
+            <i class="fa-solid fa-clock"></i>&nbsp;8:00 - 20:00
+          </p>
+          <p class="header__top-social--intro">
+            Shop bán acount uy tín nhất vn
+          </p>
+        </div>
+        <div id="header__main" class="header__main">
+          <ul class="header__main-menu">
+            <li class="header__main-menu--item">
+              <a class="header__main-menu--item--link" href="">Trang chủ</a>
+            </li>
+            <li class="header__main-menu--item">
+              <a class="header__main-menu--item--link" href="">Nạp tiền</a>
+            </li>
+            <li class="header__main-menu--item">
+              <a class="header__main-menu--item--link" href="">Hỗ trợ</a>
+            </li>
+          </ul>
+          <div class="header__main-logo">
+            <a href=""
+              ><img
+                class="header__main-logo--img"
+                src="./assets/image/3e626395304d9750b65645d1b1ec478a.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="header__main-acount">
+            <a href="" class="header__main-acount-btn">Đăng ký</a>
+            <span class="header__main-acount-or">hoặc</span>
+            <a href="" class="header__main-acount-btn">Đăng nhập</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="banner padding__container">
+        <div class="banner__info">
+          <h2 class="banner__info-title">
+            SEONGSHOP<span class="banner__info-com">.COM</span>
+          </h2>
+          <p class="banner__info-description">
+            LÀ WEBSITE CHUYÊN BÁN TÀI KHOẢN GAME PUBG MOBILE. CHÚNG TÔI LÀM VIỆC
+            MỘT CÁCH CHUYÊN NGHIỆP, UY TÍN, NHANH CHÓNG VÀ LUÔN ĐẶT QUYỀN LỢI
+            CỦA BẠN LÊN HÀNG ĐẦU.
+          </p>
+          <button class="banner__btn">Mua ngay</button>
+        </div>
+        <div class="banner__img">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/e/e7/Steve_%28Minecraft%29.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="content"></div>
+
+      <footer></footer>
+    </div>
+    <div id="backTop" class="back-top">
+      <i class="fa-sharp fa-solid fa-caret-up"></i>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/config.js"></script>
+    <script>
+      console.log( document.querySelector("#header__main"));
+      window.addEventListener("scroll", function () {
+        var top = this.scrollY;
+        if (top > 200) {
+          this.document.querySelector("#header__main").classList.add("fiexd");
+        } else {
+          this.document
+            .querySelector("#header__main")
+            .classList.remove("fiexd");
+        }
+      });
+    </script>
+  </body>
+</html>

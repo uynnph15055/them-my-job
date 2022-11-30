@@ -1,0 +1,17 @@
+{
+  "name": "wonderful",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch assets/scss:assets/css --source-map"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.53.0"
+  },
+  "dependencies": {
+    "node-scss": "^7.0.3"
+  }
+}
