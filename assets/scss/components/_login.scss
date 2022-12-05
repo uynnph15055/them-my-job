@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 70% auto;
+  grid-template-columns: auto 415px;
 }
 
 .container {
@@ -93,11 +93,11 @@
     margin: 0px 25px;
     padding-top: 25px;
     .input-wrapper {
-      padding-bottom: 25px;
+      padding-bottom: 15px;
       label {
         color: #eeeeee;
         font-size: 0.8rem;
-        letter-spacing: 1px;
+        letter-spacing: 0px;
         margin-bottom: 5px;
         display: block;
       }
@@ -105,7 +105,7 @@
     .error{
         color: $btn-hover;
         font-size: 0.8rem;
-        letter-spacing: 1px;
+        letter-spacing: 0px;
         padding-top: 3px;
     }
     .box {
@@ -149,7 +149,7 @@
     }
     .form-footer{
         p{
-            letter-spacing: 1px;
+            letter-spacing: 0px;
             font-size: 0.8rem;
             padding: 15px 0px;
             color: #EEEEEE;
