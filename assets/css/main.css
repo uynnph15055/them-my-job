@@ -9909,7 +9909,8 @@ body {
 }
 .content__in .content__nav .header__nav span .moneny {
   display: inline;
-  color: #dc2626;
+  font-size: 1rem;
+  color: red;
 }
 .content__in .content__nav .header__nav--avatar {
   width: 50px;
