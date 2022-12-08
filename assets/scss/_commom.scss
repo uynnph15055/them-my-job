@@ -43,6 +43,13 @@
   }
 }
 
+.hide-flex{
+  display: flex !important;
+
+  @include responsive-px-sp() {
+    display: none !important;
+  }
+}
 
 .containerX {
   max-width: $breakpoint-pc;
