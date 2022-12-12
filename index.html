@@ -19,21 +19,31 @@
       <header class="header">
         <div class="containerX header__in">
           <div class="menu-responsive hide-pc">
-            <label for="nav-mobile" class="icon__nav"> <i class="fa-solid fa-bars"></i></label>
+            <label for="nav-mobile" class="icon__nav">
+              <i class="fa-solid fa-bars"></i
+            ></label>
             <input hidden type="checkbox" class="input-check" id="nav-mobile" />
             <label class="over_lay" for="nav-mobile"></label>
             <div class="menu__mobile">
               <div class="btn__close">
-                <label for="nav-mobile"  class="btn__close-nav"><i class="fa-solid fa-xmark"></i></label>
+                <label for="nav-mobile" class="btn__close-nav"
+                  ><i class="fa-solid fa-xmark"></i
+                ></label>
               </div>
               <ul class="menu__mobile-list">
                 <li class="menu__mobile-item"><a href="">Thông tin</a></li>
                 <li class="menu__mobile-item"><a href="">Đổi mật khẩu</a></li>
                 <li class="menu__mobile-item"><a href="">Rút sản phẩm</a></li>
-                <li class="menu__mobile-item"><a href="">Nạp thẻ tự động</a></li>
+                <li class="menu__mobile-item">
+                  <a href="">Nạp thẻ tự động</a>
+                </li>
                 <li class="menu__mobile-item"><a href="">Nạp ATM/MOMO</a></li>
-                <li class="menu__mobile-item"><a href="">Lịch sử nạp thẻ</a></li>
-                <li class="menu__mobile-item"><a href="">Lịch sử rút vật phẩm</a></li>
+                <li class="menu__mobile-item">
+                  <a href="">Lịch sử nạp thẻ</a>
+                </li>
+                <li class="menu__mobile-item">
+                  <a href="">Lịch sử rút vật phẩm</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -66,6 +76,14 @@
                   <span class="bottom-key-2"></span>
                 </a>
               </li>
+              <li class="header__option--item">
+                <a class="learn-more">
+                  <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">Đổi xu vào game</span>
+                </a>
+              </li>
             </ul>
           </div>
           <div class="header__info">
@@ -74,8 +92,9 @@
             ></a>
             <!-- <button class="header__login">Đăng nhập</button> -->
             <div class="header__info--after-login">
-              <img src="./assets/image/unknown-avatar (1).jpg" alt="" />
-              <span>5000đ</span>
+              <!-- <img src="./assets/image/unknown-avatar (1).jpg" alt="" />
+              <span class="auth__info">5000đ</span> -->
+              <a href="" class="auth__info">Login</a>
             </div>
           </div>
         </div>
@@ -90,7 +109,7 @@
                 alt=""
               />
               <div class="header__nav--info">
-                <span class="id">ID: 84 <i class="fa-solid fa-copy"></i></span>
+                <span class="id">Uy nguyễn</span>
                 <span>Số dư : <span class="moneny">10.000đ</span></span>
               </div>
             </div>
@@ -157,6 +176,10 @@
               <div class="section__user--info-item">
                 <p class="title-item">Số dư:</p>
                 <p class="value">5000đ</p>
+              </div>
+              <div class="section__user--info-item">
+                <p class="title-item">Số dư Robux:</p>
+                <p class="value">0&nbsp;<i class="fa-solid fa-coins"></i>&nbsp;(xu)</p>
               </div>
               <div class="section__user--info-item">
                 <p class="title-item">Nhóm tài khoản:</p>
@@ -290,12 +313,128 @@
                      </div>
                      <button class="btn__submit-game"> Rút ngay</button>
                  </form>
-                 <div class="section__retract-banner">
+                 <div class="section__retract-banner hide-sp">
                     <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/xdrkxrvekx/2022_02_10/mine-6301.png" alt="">
                     <p class="section__retract-note">  Lưu ý: nếu bạn gặp vấn đề khi rút vật phẩm hãy liên hệ chăm sóc khách hàng để được hỗ trợ. Trường hợp rút nhầm về tài khoản khác shop không chịu trách nhiệm</p>
                  </div>
               </div>   
             </section> -->
+
+            <!-- Nạp thẻ cào vào game -->
+            <!-- <section class="section__retract">
+              <h2 class="title">Rút vật phẩm ( game )</h2>
+              <div class="section__retract-in">
+                 <form class="form__retract">
+                     <h3 class="form__title">Bước 1: <span>Chọn gói rút</span></h3>
+                     <div class="form__retract-checkbox">
+                      <div class="form__retract-checkbox--price">
+                        <label class="label-checkbox">
+                          <input checked name="moneny" type="radio">
+                          <div class="checkmark"></div>
+                        </label> 
+                        <p>90đ</p>
+                      </div>
+                      <p class="value">Rút 90 KC (80% Nhận Thêm 150 KC)</p>
+                     </div>
+                     <div class="form__retract-checkbox">
+                      <div class="form__retract-checkbox--price">
+                        <label class="label-checkbox">
+                          <input name="moneny" type="radio">
+                          <div class="checkmark"></div>
+                        </label> 
+                        <p>230đ</p>
+                      </div>
+                      <p class="value">
+                        Rút 230 KC (50% Nhận Thêm 300 KC)</p>
+                     </div>
+                     <div class="form__retract-checkbox">
+                      <div class="form__retract-checkbox--price">
+                        <label class="label-checkbox">
+                          <input name="moneny" type="radio">
+                          <div class="checkmark"></div>
+                        </label> 
+                        <p>465đ</p>
+                      </div>
+                      <p class="value">Rút 465 KC (30% Nhận Thêm 2,000 KC)</p>
+                     </div>
+                     <div class="form__retract-checkbox">
+                      <div class="form__retract-checkbox--price">
+                        <label class="label-checkbox">
+                          <input name="moneny" type="radio">
+                          <div class="checkmark"></div>
+                        </label> 
+                        <p>950đ</p>
+                      </div>
+                      <p class="value">Rút 950 KC (15% Nhận Thêm 5,000 KC)</p>
+                     </div>
+                     <div class="form__retract-checkbox">
+                      <div class="form__retract-checkbox--price">
+                        <label class="label-checkbox">
+                          <input name="moneny" type="radio">
+                          <div class="checkmark"></div>
+                        </label> 
+                        <p>2375đ</p>
+                      </div>
+                      <p class="value">
+                        Rút 2375 KC (5% Nhận Thêm 10,000 KC)
+                        </p>
+                     </div>
+                     <h3 class="form__title">Bước 2: <span>Nhập ID game (Minecraft)</span></h3>
+                     <div class="import__id-game">
+                        <input placeholder="Nhập ID game">
+                        <p>Ví dụ: 3098435880</p>
+                     </div>
+                     <button class="btn__submit-game"> Rút ngay</button>
+                 </form>
+                 <div class="section__retract-banner hide-sp">
+                    <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/xdrkxrvekx/2022_02_10/mine-6301.png" alt="">
+                    <p class="section__retract-note">  Lưu ý: nếu bạn gặp vấn đề khi rút vật phẩm hãy liên hệ chăm sóc khách hàng để được hỗ trợ. Trường hợp rút nhầm về tài khoản khác shop không chịu trách nhiệm</p>
+                 </div>
+              </div>   
+            </section> -->
+            <!-- <div class="section__card--recharge">
+              <h2 class="title">Nạp thẻ siêu tốc</h2>
+              <form class="form__card">
+                <div class="form__control">
+                  <label for="" class="">Nhà mạng:</label>
+                  <div class="home__word">
+                    <p>Chọn nhà mạng</p>
+                    <i class="fa-solid fa-sort-down"></i>
+                    <input type="text" value="" hidden />
+                  </div>
+                </div>
+                <div class="form__control">
+                  <label for="" class="">Mệnh giá:</label>
+                  <div class="home__word">
+                    <p>10.000</p>
+                    <i class="fa-solid fa-sort-down"></i>
+                    <input type="text" value="" hidden />
+                  </div>
+                </div>
+                <div class="form__control">
+                  <div class="inputbox">
+                    <input required="required" type="text" />
+                    <span>Mã thẻ</span>
+                    <i></i>
+                  </div>
+                </div>
+                <div class="form__control">
+                  <div class="inputbox">
+                    <input required="required" type="text" />
+                    <span>Serial thẻ</span>
+                    <i></i>
+                  </div>
+                </div>
+                <button class="btn__submit-game">Rút ngay</button>
+              </form>
+              <ul class="note">
+                <li>Lưu ý:</li>
+                <li>- Vui lòng nạp đúng mệnh giá, sai mệnh giá sẽ không được</li>
+                <li>- Vui lòng nạp đúng mệnh giá, sai mệnh giá sẽ không được
+                  cộng tiền vào tài khoản. - Thẻ cào bị treo ĐANG XỬ LÝ quá 10p kể
+                  từ lúc nạp thẻ xin vui lòng liên hện page để được hỗ trợ.</li>
+              </ul>
+            </div> -->
           </div>
         </div>
       </div>
@@ -326,13 +465,15 @@
             </ul>
           </div>
           <div class="footer__content-box">
-            <h2 class="title-main hide-sp">SEONGSHOP.COM ACC MINECRAFT UY TÍN GIÁ RẺ CHẤT LƯỢNG.</h2>
+            <h2 class="title-main hide-sp">
+              SEONGSHOP.COM ACC MINECRAFT UY TÍN GIÁ RẺ CHẤT LƯỢNG.
+            </h2>
             <div class="footer__content">
               <div class="footer__info">
                 <h2 class="title">Về chúng tôi</h2>
                 <p class="description">
-                  Chúng tôi luôn lấy uy tín đặt trên hàng đầu đối với khách hàng,
-                  hy vọng chúng tôi sẽ được phục vụ các bạn. Cảm ơn!
+                  Chúng tôi luôn lấy uy tín đặt trên hàng đầu đối với khách
+                  hàng, hy vọng chúng tôi sẽ được phục vụ các bạn. Cảm ơn!
                 </p>
                 <h4 class="title-sub">Thời gian hỗ trợ:</h4>
                 <p class="description">
@@ -379,18 +520,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/config.js"></script>
-    <script>
-      console.log(document.querySelector("#header__main"));
-      window.addEventListener("scroll", function () {
-        var top = this.scrollY;
-        if (top > 200) {
-          this.document.querySelector("#header__main").classList.add("fiexd");
-        } else {
-          this.document
-            .querySelector("#header__main")
-            .classList.remove("fiexd");
-        }
-      });
-    </script>
   </body>
 </html>

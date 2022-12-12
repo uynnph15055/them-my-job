@@ -19,18 +19,6 @@ body {
   font-weight: $font-weight-default;
 }
 
-.header {
-  background-color: $primary-color;
-  width: 100%;
-  z-index: 10;
-  @include responsive-vw-pc() {
-    height: px2vw-pc(150px);
-  }
-
-  @include responsive-px-sp() {
-    height: px2vw-sp(150px);
-  }
-}
 
 @keyframes fadeIn {
   from {

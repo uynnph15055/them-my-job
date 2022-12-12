@@ -46,4 +46,4 @@ function updateStatusImage(index) {
 setInterval(() => {
     currentIndex++;
     updateStatusImage(currentIndex);
-} , 5000)
+} , 7000)

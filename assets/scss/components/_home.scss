@@ -1,13 +1,14 @@
 .header {
   height: 80px;
   padding-top: 10px;
+  background-color: $primary-color;
   @include responsive-vw-pc() {
     height: px2vw-pc(80px);
     padding-top:px2vw-pc(10px);
   }
 
   @include responsive-px-sp() {
-    height: px2vw-sp(80px);
+    height: px2vw-sp(120px);
   }
   &__in {
     display: flex;
@@ -19,6 +20,13 @@
     .icon__nav{
       font-size: 30px;
       cursor: pointer;
+      @include responsive-vw-pc() {
+        font-size: px2vw-pc(30px);
+      }
+    
+      @include responsive-px-sp() {
+        font-size: px2vw-pc(60px);
+      }
     }
     .input-check:checked ~ .over_lay{
       display: block;
@@ -94,7 +102,7 @@
         }
       
         @include responsive-px-sp() {
-          height: px2vw-sp(65px);
+          height: px2vw-sp(80px);
         }
       }
     }
@@ -221,6 +229,95 @@
           right: 0;
           width: 0;
         }
+
+        .learn-more{
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+          outline: none;
+          border: 0;
+          vertical-align: middle;
+          text-decoration: none;
+          background: transparent;
+          padding: 0;
+          font-size: inherit;
+          font-family: inherit;
+         }
+         
+         .learn-more {
+          width: 12rem;
+          height: auto;
+         }
+         
+         .learn-more .circle {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 35px;
+          height: 35px;
+          background: $sub-color;
+          border-radius: 1.625rem;
+         }
+         
+         .learn-more .circle .icon {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          background: #fff;
+         }
+         
+         .learn-more .circle .icon.arrow {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          left: 4px;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+         }
+         
+         .learn-more .circle .icon.arrow::before {
+          position: absolute;
+          content: "";
+          top: -0.29rem;
+          right: 0.0625rem;
+          width: 0.625rem;
+          height: 0.625rem;
+          border-top: 0.125rem solid #fff;
+          border-right: 0.125rem solid #fff;
+          transform: rotate(45deg);
+         }
+         
+         .learn-more .button-text {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: absolute;
+          top: 1px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 5px 0;
+          margin: 0 0 0 1.85rem;
+          color: $white-color;
+          font-weight: 700;
+          font-size: 0.9rem;
+          line-height: 1.6;
+          text-align: center;
+          text-transform: uppercase;
+         }
+         
+         .learn-more:hover .circle {
+          width: 100%;
+         }
+         
+         .learn-more:hover .circle .icon.arrow {
+          background: #fff;
+          transform: translate(1rem, 0);
+         }
+         
+         .learn-more:hover .button-text {
+          color: #fff;
+         }
       }
     }
   }
@@ -230,7 +327,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    a {
+    .header__social {
       width: 40px;
       height: 40px;
       text-align: center;
@@ -250,14 +347,14 @@
       }
     
       @include responsive-px-sp() {
-        width: px2vw-sp(40px);
-        height:  px2vw-sp(40px);
-        line-height: px2vw-sp(40px);
-        margin-right: px2vw-sp(40px);
+        width: px2vw-sp(50px);
+        height:  px2vw-sp(50px);
+        line-height: px2vw-sp(50px);
+        margin-right: px2vw-sp(50px);
       }
     }
 
-    a:hover{
+    .header__social:hover{
       transform: translateY(-8px);
       transition: all ease-in-out 0.3s;
       box-shadow: 0px 0px 3px #ccc;
@@ -279,14 +376,16 @@
         }
       
         @include responsive-px-sp() {
-          height: px2vw-sp(30px);
-          margin-right: px2vw-sp(10px);
+          height: px2vw-sp(50px);
           border-radius:px2vw-sp(50px);
         }
       }
-      span {
+      .auth__info {
         color: $white-color;
-        display: block;
+        text-decoration: none;
+        @include responsive-px-sp() {
+          font-size: px2vw-sp(30px);
+        }
       }
     }
 
@@ -297,7 +396,7 @@
       background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
       border: 0;
       color: #fff;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       line-height: 1;
       box-shadow: 6px 0px 0px #00e6f6;
       outline: transparent;
@@ -310,7 +409,7 @@
       }
     
       @include responsive-px-sp() {
-        padding: px2vw-sp(10px) px2vw-sp(20px);
+        padding: px2vw-sp(15px) px2vw-sp(20px);
         font-size:  px2vw-sp(16px);
         letter-spacing:  px2vw-sp(3px);
       }
@@ -409,7 +508,6 @@
   background-image: url('/assets/image/z3935489386009_11eefc29011925d4c5c18698b221d79d\ \(1\).jpg');
   padding: 30px 0px;
   background-size: cover;
-  min-height: 700px;
   height: 100%;
   @include responsive-vw-pc() {
     padding: px2vw-pc(30px) px2vw-pc(0px);
@@ -417,7 +515,9 @@
 
   @include responsive-px-sp() {
     padding: px2vw-sp(30px) px2vw-sp(0px);
+    min-height: px2vw-sp(500px);
   }
+
   &__in {
     display: grid;
     grid-template-columns: 240px auto;
@@ -580,7 +680,7 @@
     }
   
     @include responsive-px-sp() {
-      padding-left: px2vw-pc(30px);
+      padding-left: px2vw-pc(0px);
     }
     .section__user--info {
       padding-right: 250px;
@@ -618,9 +718,9 @@
         }
       
         @include responsive-px-sp() {
-          margin-top: px2vw-sp(20px);
+          margin-top: px2vw-sp(30px);
           grid-template-columns: px2vw-sp(300px) auto;
-          padding: px2vw-sp(10px);
+          padding: px2vw-sp(15px) px2vw-sp(20px);
         }
         .title {
           flex: 1;
@@ -635,10 +735,16 @@
             color: $white-color;
           }
         }
+        .fa-coins{
+          color: #FFBF00;
+        }
       }
       .btn__now-box {
         text-align: center;
         margin-top: 50px;
+        @include responsive-px-sp() {
+          margin-top: px2vw-sp(70px);
+        }
         button {
           position: relative;
           width: 200px;
@@ -662,8 +768,8 @@
           }
         
           @include responsive-px-sp() {
-            width: px2vw-sp(200px);
-            height: px2vw-sp(73px);
+            width: px2vw-sp(400px);
+            height: px2vw-sp(200px);
             padding: px2vw-sp(10px) px2vw-sp(20px);
           }
         }
@@ -719,13 +825,22 @@
 
     .section__user-change--pass {
       padding-right: 400px;
+      @include responsive-vw-pc() {
+        padding-right: px2vw-sp(300px);
+      }
+      @include responsive-px-sp() {
+        padding-right: px2vw-sp(0px);
+      }
       .title {
         color: $white-color;
         font-size: 1.2rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #333;
       }
       .form-box {
         position: relative;
         margin-top: 20px;
+        
         .input-wrapper {
           padding-bottom: 15px;
           label {
@@ -745,7 +860,7 @@
         .box {
           --border-height: 1px;
           --border-before-color: rgba(221, 221, 221, 0.39);
-          --border-after-color: #29c2c1;
+          --border-after-color: #e44c05;
           --input-hovered-color: #4985e01f;
           position: relative;
           width: 100%;
@@ -823,6 +938,10 @@
     }
 
     .section__retract{
+       
+      @include responsive-px-sp() {
+        padding-bottom: px2vw-sp(60px);
+      }
       .title {
         color: $white-color;
         font-size: 1.2rem;
@@ -833,6 +952,13 @@
       &-in{
         display: grid;
         grid-template-columns: 450px auto;
+        @include responsive-vw-pc() {
+          grid-template-columns: px2vw-pc(450px) auto;
+        }
+      
+        @include responsive-px-sp() {
+          grid-template-columns: 1fr;
+        }
         .section__retract-banner{
           img{
             width: 100%;
@@ -855,12 +981,25 @@
             display: grid;
             grid-template-columns: 120px auto;
             margin-top: 20px;
+            @include responsive-vw-pc() {
+              grid-template-columns: px2vw-pc(120px) auto;
+              margin-top: px2vw-pc(20px);
+            }
+    
+            @include responsive-px-sp() {
+              grid-template-columns: px2vw-sp(250px) auto;
+              margin-top: px2vw-sp(20px);
+            }
             .form__retract-checkbox--price{
               display: flex;
               p{
-                font-size: 1.1rem;
+                font-size: 1rem;
                 color: #ff013c;
                 margin-left: 20px;
+        
+                @include responsive-px-sp() {
+                  font-size: px2vw-sp(35px);
+                }
               }
             }
             .label-checkbox input {
@@ -891,6 +1030,12 @@
               border-bottom-left-radius: 15px;
               border-top-right-radius: 15px;
               box-shadow: 0px 0px 17px #c7bbb8;
+             
+      
+              @include responsive-px-sp() {
+                height: 1.2em;
+                width: 1.2em;
+              }
              }
              
              /* When the checkbox is checked, add a blue background */
@@ -920,10 +1065,14 @@
               border: solid rgb(233, 222, 222);
               border-width: 0 0.15em 0.15em 0;
               transform: rotate(45deg);
+            
              }
             .value{
               color: $white-color;
               font-size: 1rem;
+              @include responsive-px-sp() {
+                font-size: px2vw-sp(30px);
+              }
             }
           }
           .import__id-game{
@@ -935,7 +1084,7 @@
               -moz-box-sizing: content-box;
               box-sizing: content-box;
               padding: 10px 20px;
-              border: 4px solid $sub-color;
+              border: 2px solid $sub-color;
               -webkit-border-radius: 11px;
               border-radius: 5px;
               font: normal 19px/normal "Courier New", Courier, monospace;
@@ -995,6 +1144,230 @@
         }
       }
     }
+
+    .section__history-retract{
+      .title {
+        color: $white-color;
+        font-size: 1.2rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #333;
+        @include responsive-vw-pc() {
+          padding-bottom: px2vw-pc(10px);
+        }
+      
+        @include responsive-vw-sp() {
+          padding-bottom: px2vw-sp(10px);
+        }
+      }
+      .table__box{
+        margin-top: 20px;
+        margin-right: 200px;
+        @include responsive-vw-pc() {
+          padding-top: px2vw-pc(20px);
+          margin-right: px2vw-pc(200px);
+        }
+      
+        @include responsive-vw-sp() {
+          padding-top: px2vw-sp(20px);
+          margin-right: px2vw-pc(0px);
+        }
+      }
+
+      .stt {
+        width: 80px;
+        @include responsive-vw-pc() {
+          width: px2vw-pc(80px);
+        }
+      
+        @include responsive-vw-sp() {
+          width: px2vw-sp(80px);
+        }
+      }
+
+      th{
+        font-weight: 600;
+        color: $sub-color;
+        border: 1px solid $white-color;
+        padding: 10px;
+        @include responsive-vw-pc() {
+          padding: px2vw-pc(10px);
+        }
+      
+        @include responsive-vw-sp() {
+          padding: px2vw-sp(10px);
+        }
+      }
+
+      .table, td {
+        border: 1px solid $white-color;
+        color :  $white-color;
+        font-size: 16px;
+        padding: 10px;
+        text-align: center;
+        font-weight: normal;
+        @include responsive-vw-pc() {
+          font-size: px2vw-pc(16px);
+        }
+      
+        @include responsive-px-sp() {
+           font-size: px2vw-sp(23px);
+        }
+      }
+      
+      .table {
+        border-collapse: collapse;
+        width: 100%;
+
+        .points{
+          color: #ff013c;
+        }
+      }
+
+      .note{
+        font-size: 0.9rem;
+        color: $white-color;
+        margin-top: 15px;
+        font-style: italic;
+      }
+    }
+
+    .section__card--recharge{
+      .title {
+        color: $white-color;
+        font-size: 1.2rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #333;
+      }
+      .form__card{
+        margin-top: 20px;
+        .form__control{
+          margin-bottom: 20px;
+          label{
+            color: $white-color;
+            display: block;
+            font-size: 0.9rem;
+          }
+          .home__word{
+            width: 300px;
+            margin-top: 10px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid $sub-color;
+            display: flex;
+            justify-content: space-between;
+            color: $white-color;
+            align-items: center;
+            font-size: 0.9rem;
+            padding: 0px  10px;
+            transition: all ease-in 0.3s;
+            i{
+              margin-top: -7px;
+              font-size: 1.1rem;
+            }
+          }
+
+          .home__word:hover{
+            cursor: pointer;
+            background-color: $sub-color;
+            transition: all ease-in 0.3s;
+          }
+          .inputbox {
+            position: relative;
+            width: 300px;
+            margin-top: 30px;
+          }
+          
+          .inputbox input {
+            position: relative;
+            width: 100%;
+            padding: 20px 10px 10px;
+            background: transparent;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            color: #ffff;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            z-index: 10;
+          }
+          
+          .inputbox span {
+            position: absolute;
+            left: 0;
+            padding: 20px 10px 10px;
+            font-size: 0.9rem;
+            color: #8f8f8f;
+            letter-spacing: 00.05em;
+            transition: 0.5s;
+            pointer-events: none;
+          }
+          
+          .inputbox input:valid ~span,
+          .inputbox input:focus ~span {
+            color: $white-color;
+            transform: translateX(-10px) translateY(-34px);
+            font-size:  0.9rem;
+          }
+          
+          .inputbox i {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: $sub-color;
+            border-radius: 4px;
+            transition: 0.5s;
+            pointer-events: none;
+            z-index: 9;
+          }
+          
+          .inputbox input:valid ~i,
+          .inputbox input:focus ~i {
+            height: 40px;
+          }
+
+
+
+        }
+
+        .btn__submit-game{
+          width: 300px;
+          padding: 10px 0px;
+          border: none;
+          background: none;
+          cursor: pointer;
+          text-transform: uppercase;
+          font-weight: bold;
+          display: block;
+          text-transform: uppercase;
+          color: $white-color;
+          font-weight: 700;
+          border-radius: 3px;
+          font-size: 0.8rem;
+          box-shadow: rgb(0 0 0 / 35%) 0px 3px 7px 0px;
+          background-color: $sub-color;
+          margin-top: 30px;
+        }
+
+        .btn__submit-game:hover{
+          background-color: #d35c0f;
+          color: $white-color;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+      
+      .note{
+        margin-top: 20px;
+        list-style-type: none;
+        li{
+          font-size: 0.9rem;
+          font-style: italic;
+          color: #ff013c;
+        }
+      }
+    }
   }
 }
 .footer {
@@ -1022,7 +1395,7 @@
   }
   .header {
     @include responsive-vw-sp() {
-      margin-bottom: px2vw-sp(120px);
+      // margin-bottom: px2vw-sp(100px);
     }
     img {
       height: 100px;
@@ -1031,7 +1404,7 @@
       }
     
       @include responsive-vw-sp() {
-        height: px2vw-sp(50px);
+        height: px2vw-sp(100px);
       }
     }
     .footer__title {
@@ -1100,7 +1473,6 @@
     }
   
     @include responsive-vw-sp() {
-      padding-bottom: px2vw-pc(20px) ;
     }
     .title-main {
       font-size: 1.1rem;
@@ -1123,6 +1495,7 @@
     
       @include responsive-vw-sp() {
         grid-template-columns: 1fr;
+        margin-top:  px2vw-sp(150px);
  
       }
       .footer__info {
